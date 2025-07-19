@@ -11,19 +11,17 @@ body {
   display: grid;
   grid-template-areas:
     "header header"
-    "left right";
+    "photo rate-conversion"
+    "ingredients directions";
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
   margin: 0 auto;
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.5);
-  /* 배경이 더 잘 보이도록 50% 불투명 */
   backdrop-filter: blur(5px);
-  /* 흐림 효과로 텍스트 가독성 유지 */
   padding: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  /* 테두리를 부드럽게 */
 }
 
 .header {
@@ -32,17 +30,25 @@ body {
   color: #b45f06;
 }
 
-.left {
-  grid-area: left;
+.photo {
+  grid-area: photo;
 }
 
-.right {
-  grid-area: right;
+.ingredients {
+  grid-area: ingredients;
+}
+
+.rate-conversion {
+  grid-area: rate-conversion;
+}
+
+.directions {
+  grid-area: directions;
 }
 
 img {
   display: block;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   margin: 0 auto;
 }
@@ -53,8 +59,29 @@ figcaption {
   color: #555;
 }
 
-ul,
-ol {
+fieldset {
+  width: 260px;
+  margin-bottom: 25px;
+}
+
+.rate-conversion h3+fieldset {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.rate-conversion h3 {
+  margin-bottom: 8px;
+}
+
+.rate-conversion input[type="text"] {
+  width: 80px;
+  padding: 5px;
+  margin: 0 5px 15px 0;
+  box-sizing: border-box;
+}
+
+.ingredients ul,
+.directions ol {
   margin-left: 20px;
 }
 
