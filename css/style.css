@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("../images/pancake-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #111;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "photo rate-conversion"
+    "ingredients directions";
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  color: #b45f06;
+}
+
+.photo {
+  grid-area: photo;
+}
+
+.ingredients {
+  grid-area: ingredients;
+}
+
+.rate-conversion {
+  grid-area: rate-conversion;
+}
+
+.directions {
+  grid-area: directions;
+}
+
+img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+fieldset {
+  width: 260px;
+  margin-bottom: 25px;
+}
+
+.rate-conversion h3+fieldset {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.rate-conversion h3 {
+  margin-bottom: 8px;
+}
+
+.rate-conversion input[type="text"] {
+  width: 80px;
+  padding: 5px;
+  margin: 0 5px 15px 0;
+  box-sizing: border-box;
+}
+
+.ingredients ul,
+.directions ol {
+  margin-left: 20px;
+}
+
+.footer-note {
+  text-align: right;
+  margin: 20px;
+  font-size: 0.8em;
+  color: #333;
+}
