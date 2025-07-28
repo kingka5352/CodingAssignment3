@@ -97,7 +97,7 @@ fieldset {
 }
 
 footer.footer {
-  text-align: center;
+  text-align: right;
   margin: 0 auto 20px;
   width: 100%;
   max-width: 1000px;
